@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\back-end\\src\\Api.Application\\application.csproj",
+      "projectUniqueName": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\application.csproj",
       "projectName": "application",
-      "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\back-end\\src\\Api.Application\\application.csproj",
+      "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\application.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\back-end\\src\\Api.Application\\obj\\",
+      "outputPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

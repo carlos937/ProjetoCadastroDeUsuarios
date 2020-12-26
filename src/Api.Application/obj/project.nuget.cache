@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZMMqQPn1nfDnZ/UxHDSImtdU7VcHe7ru3sNag53XDyS4vC/BQFFeXOC1ZnHtLWw3NKd4QG3sJyGFPAHm+M7x4A==",
+  "dgSpecHash": "0cpH+Y3+qL09JAikqIommttwMtPyt+L/TfyxxtQVTduL9vy0wRAaxzWY9x9AMmAnEUnVcz2DQFmkGJie2XP2hQ==",
   "success": true,
-  "projectFilePath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\back-end\\src\\Api.Application\\application.csproj",
+  "projectFilePath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
