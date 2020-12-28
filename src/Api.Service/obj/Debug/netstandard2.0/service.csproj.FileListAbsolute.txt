@@ -6,3 +6,4 @@ D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Service\obj\Debug\netstanda
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Service\obj\Debug\netstandard2.0\service.csproj.CoreCompileInputs.cache
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Service\obj\Debug\netstandard2.0\service.dll
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Service\obj\Debug\netstandard2.0\service.pdb
+D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Service\obj\Debug\netstandard2.0\Service.csprojAssemblyReference.cache
