@@ -1,9 +1,0 @@
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Domain\bin\Debug\netstandard2.0\domain.deps.json
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Domain\bin\Debug\netstandard2.0\domain.dll
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Domain\bin\Debug\netstandard2.0\domain.pdb
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Domain\obj\Debug\netstandard2.0\domain.csprojAssemblyReference.cache
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Domain\obj\Debug\netstandard2.0\domain.AssemblyInfoInputs.cache
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Domain\obj\Debug\netstandard2.0\domain.AssemblyInfo.cs
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Domain\obj\Debug\netstandard2.0\domain.csproj.CoreCompileInputs.cache
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Domain\obj\Debug\netstandard2.0\domain.dll
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Domain\obj\Debug\netstandard2.0\domain.pdb

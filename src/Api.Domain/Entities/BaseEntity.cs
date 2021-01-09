@@ -9,5 +9,6 @@ namespace Domain.Entities
         public Guid id { get; set; }
         public DateTime dataDeCadastro { get; set; }
         public DateTime dataDeAtualizacao { get; set; }
+        public bool lixeira { get; set; }
     }
 }

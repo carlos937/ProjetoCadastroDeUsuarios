@@ -16,8 +16,9 @@ namespace Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Usuario>(new UsuarioMap().Configure);
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Usuario>(new UsuarioMap().Configure);
+            
         }
     }
 }

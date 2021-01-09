@@ -10,7 +10,7 @@ namespace Data.Context
     {
         public MyContext CreateDbContext(string[] args)
         {
-            var connectionString = "Server=localhost;Port=3306;Database=teste;Uid=sa;Pwd=12345";
+            var connectionString = "Server=localhost;Database=teste;Uid=sa;Pwd=12345";
             var optionsBuilder = new DbContextOptionsBuilder<MyContext>();
             optionsBuilder.UseSqlServer(connectionString);
             return new MyContext(optionsBuilder.Options);

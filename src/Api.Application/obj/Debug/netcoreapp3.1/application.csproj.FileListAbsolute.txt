@@ -27,7 +27,6 @@ D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\bin\Debug\netco
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\bin\Debug\netcoreapp3.1\application.runtimeconfig.dev.json
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\bin\Debug\netcoreapp3.1\application.dll
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\bin\Debug\netcoreapp3.1\application.pdb
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netcoreapp3.1\application.csprojAssemblyReference.cache
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netcoreapp3.1\application.AssemblyInfoInputs.cache
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netcoreapp3.1\application.AssemblyInfo.cs
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netcoreapp3.1\application.csproj.CoreCompileInputs.cache
@@ -38,3 +37,4 @@ D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netco
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netcoreapp3.1\application.dll
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netcoreapp3.1\application.pdb
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netcoreapp3.1\application.genruntimeconfig.cache
+D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netcoreapp3.1\Application.csprojAssemblyReference.cache
