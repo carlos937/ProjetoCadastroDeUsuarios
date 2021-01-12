@@ -18,9 +18,16 @@ namespace Data.Repositorios
             _context = context;
         }
 
-        public Task<bool> deleteAsync(Guid id)
+        public async Task deleteAsync(Guid id)
         {
-            var itemDoBanco = await _context.Set<T>().FirstOrDefaultAsync(i => i.id == item.id);
+            var itemDoBanco = await _context.Set<T>().FirstOrDefaultAsync(i => i.id == id);
+            itemDoBanco.lixeira = true;
+            if (itemDoBanco == null)
+            {
+               throw new Exception("Item não encontrado.");
+            }
+            await _context.SaveChangesAsync();
+
         }
 
         public async Task<T> InsertAsync(T item)
@@ -41,9 +48,14 @@ namespace Data.Repositorios
             return item;
         }
 
-        public Task<IEnumerable<T>> selectAsync()
+        public async Task<IEnumerable<T>> selectAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Set<T>().ToListAsync();
+        }
+
+        public async Task<T> find(Guid id)
+        {
+            return await _context.Set<T>().FirstOrDefaultAsync( i => i.id == id);
         }
 
         public async Task<T> updateAsync(T item)

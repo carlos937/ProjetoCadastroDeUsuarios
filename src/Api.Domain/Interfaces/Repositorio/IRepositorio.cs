@@ -10,7 +10,7 @@ namespace Domain.Interfaces
     {
         Task<T> InsertAsync(T item);
         Task<T> updateAsync(T item);
-        Task<bool> deleteAsync(Guid id);
+        Task deleteAsync(Guid id);
         Task<IEnumerable<T>> selectAsync();
 
     }
