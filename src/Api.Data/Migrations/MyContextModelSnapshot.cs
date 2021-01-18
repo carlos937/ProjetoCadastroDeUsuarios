@@ -34,6 +34,9 @@ namespace Data.Migrations
                     b.Property<string>("email")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<bool>("lixeira")
+                        .HasColumnType("bit");
+
                     b.Property<string>("nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

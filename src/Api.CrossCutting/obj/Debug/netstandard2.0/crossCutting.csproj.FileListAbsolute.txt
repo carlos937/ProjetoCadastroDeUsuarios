@@ -1,9 +1,0 @@
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\bin\Debug\netstandard2.0\crossCutting.deps.json
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\bin\Debug\netstandard2.0\crossCutting.dll
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\bin\Debug\netstandard2.0\crossCutting.pdb
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netstandard2.0\crossCutting.AssemblyInfoInputs.cache
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netstandard2.0\crossCutting.AssemblyInfo.cs
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netstandard2.0\crossCutting.csproj.CoreCompileInputs.cache
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netstandard2.0\crossCutting.dll
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netstandard2.0\crossCutting.pdb
-D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netstandard2.0\CrossCutting.csprojAssemblyReference.cache

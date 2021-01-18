@@ -8,9 +8,10 @@ namespace Data.Context
 {
     public class ContextFactory : IDesignTimeDbContextFactory<MyContext>
     {
+        public static string stringDoBanco = "Server=localhost;Database=teste;Uid=sa;Pwd=12345";
         public MyContext CreateDbContext(string[] args)
         {
-            var connectionString = "Server=localhost;Database=teste;Uid=sa;Pwd=12345";
+            var connectionString = stringDoBanco;
             var optionsBuilder = new DbContextOptionsBuilder<MyContext>();
             optionsBuilder.UseSqlServer(connectionString);
             return new MyContext(optionsBuilder.Options);
