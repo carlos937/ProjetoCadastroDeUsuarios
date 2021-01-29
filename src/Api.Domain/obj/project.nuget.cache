@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "n+r9vWLCLXOLLQUGF6HsqVJ3ypU2kwLVA9yuXNpTpr/XeBMcOXYya2cAXo2/44fGxgorpEYBu4p+nauMK0QuNg==",
+  "dgSpecHash": "ZV5rElwZZ0jtasnT4zA5MjbQiZkjjWUbwVgkJ45Ze4ZO/yZewNYwPWgCxLCDyaa0ol3frhxRpQj5QN2sPtJVkA==",
   "success": true,
   "projectFilePath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.8.0\\microsoft.identitymodel.jsonwebtokens.6.8.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.identitymodel.logging\\6.8.0\\microsoft.identitymodel.logging.6.8.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.8.0\\microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.8.0\\system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

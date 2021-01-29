@@ -12,6 +12,7 @@ namespace Domain.Interfaces
         Task<T> updateAsync(T item);
         Task deleteAsync(Guid id);
         Task<IEnumerable<T>> selectAsync();
+        Task<T> find(Guid id);
 
     }
 }

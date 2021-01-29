@@ -8,7 +8,8 @@ namespace Domain.Interfaces.Repositorio
 {
     public interface IRepositorioUsuario : IRepositorio<Usuario>
     {
-       
 
+        Task<List<Usuario>> getUsuarios();
+        Task<Usuario> getUsuarioLogin(string email);
     }
 }

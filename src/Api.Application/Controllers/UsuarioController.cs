@@ -4,6 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Domain.Interfaces.Service;
+using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,23 +21,34 @@ namespace Application.Controllers
             _serviceUsuario = serviceUsuario;
         }
 
-        [HttpGet]
-        public async Task<ActionResult> SelectAll()
+        [HttpGet("SelectAll")]
+        public async Task<List<UsuarioModel>> SelectAll()
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            return await _serviceUsuario.buscarTodos();
+        }
+        [Authorize("Bearer")]
+        [HttpPost("Adicionar")]
+        public async Task<ServerStatus> Adicionar(UsuarioModel usuarioModel)
+        {
+            return await _serviceUsuario.adicionar(usuarioModel);
+        }
 
-            try
-            {
-                return Ok(await _serviceUsuario.buscarTodos());
-            }
-            catch (Exception ex)
-            {
-                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
-            }
+        [HttpPost("Atualizar")]
+        public async Task<ServerStatus> Atualizar(UsuarioModel usuarioModel)
+        {
+            return await _serviceUsuario.atualizar(usuarioModel);
+        }
 
+        [HttpGet("Remover")]
+        public async Task<ServerStatus> Remover(Guid id)
+        {
+            return await _serviceUsuario.remover(id);
+        }
+        
+        [HttpPost("Login")]
+        public async Task<ServerStatus> login(UsuarioModel usuarioModel)
+        {
+            return await _serviceUsuario.login(usuarioModel);
         }
     }
 }
