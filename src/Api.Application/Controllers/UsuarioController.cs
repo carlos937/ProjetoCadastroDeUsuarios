@@ -20,35 +20,36 @@ namespace Application.Controllers
         {
             _serviceUsuario = serviceUsuario;
         }
-
+        [Authorize("Bearer")]
         [HttpGet("SelectAll")]
         public async Task<List<UsuarioModel>> SelectAll()
         {
             return await _serviceUsuario.buscarTodos();
         }
-        [Authorize("Bearer")]
+      
         [HttpPost("Adicionar")]
         public async Task<ServerStatus> Adicionar(UsuarioModel usuarioModel)
         {
             return await _serviceUsuario.adicionar(usuarioModel);
         }
-
+        [Authorize("Bearer")]
         [HttpPost("Atualizar")]
         public async Task<ServerStatus> Atualizar(UsuarioModel usuarioModel)
         {
             return await _serviceUsuario.atualizar(usuarioModel);
         }
-
+        [Authorize("Bearer")]
         [HttpGet("Remover")]
         public async Task<ServerStatus> Remover(Guid id)
         {
             return await _serviceUsuario.remover(id);
         }
-        
+
         [HttpPost("Login")]
         public async Task<ServerStatus> login(UsuarioModel usuarioModel)
         {
             return await _serviceUsuario.login(usuarioModel);
         }
+   
     }
-}
+   }

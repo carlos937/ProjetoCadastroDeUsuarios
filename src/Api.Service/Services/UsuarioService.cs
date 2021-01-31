@@ -14,6 +14,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Service.Services
@@ -22,24 +23,24 @@ namespace Service.Services
     {
         private IRepositorioUsuario _repositorio;
 
-        private SigningConfigurations _signingConfigurations;
-
         private TokenConfigurations _tokenConfigurations;
+
+        private SigningConfigurations _signingConfigurations;
 
         public IConfiguration _configuration { get; }
 
 
         public UsuarioService(
             IRepositorioUsuario repositorio,
-            SigningConfigurations signingConfigurations,
+            IConfiguration configuration ,
             TokenConfigurations tokenConfigurations,
-            IConfiguration configuration
+            SigningConfigurations signingConfigurations
             )
         {
             _configuration = configuration;
-            _signingConfigurations = signingConfigurations;
-            _tokenConfigurations = tokenConfigurations;
             _repositorio = repositorio;
+            _tokenConfigurations = tokenConfigurations;
+            _signingConfigurations = signingConfigurations;
         }
 
         public async Task<List<UsuarioModel>> buscarTodos()
@@ -50,9 +51,9 @@ namespace Service.Services
             {
                 usuarios.Add(new UsuarioModel()
                 {
-                     id = u.id,
-                     email = u.email,
-                     nome = u.nome
+                    id = u.id,
+                    email = u.email,
+                    nome = u.nome
                 });
             });
 
@@ -63,18 +64,16 @@ namespace Service.Services
         {
             try
             {
-                var usuario = new Usuario()
-                {
-                    email = usuarioModel.email,
-                    nome = usuarioModel.nome
-                };
+                usuarioModel.email = usuarioModel.email.Trim();
+                var usuario = new Usuario(usuarioModel.nome, usuarioModel.email, usuarioModel.senha);
+
                 await _repositorio.InsertAsync(usuario);
                 usuarioModel.id = usuario.id;
                 usuarioModel.status = 0;
                 usuarioModel.mensagem = "Usuario adicionado com sucesso.";
                 return usuarioModel;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return new ServerStatus()
                 {
@@ -88,9 +87,11 @@ namespace Service.Services
         {
             try
             {
+                usuarioModel.email = usuarioModel.email.Trim();
                 var usuario = _repositorio.find(usuarioModel.id).Result;
-                usuario.email = usuarioModel.email;
-                usuario.nome = usuarioModel.nome;
+                usuario.setEmail(usuarioModel.email);
+                usuario.setNome(usuarioModel.nome);
+                usuario.setSenha(usuarioModel.senha);
                 await _repositorio.updateAsync(usuario);
                 usuarioModel.id = usuario.id;
                 usuarioModel.status = 0;
@@ -133,36 +134,27 @@ namespace Service.Services
         {
             try
             {
-                var usuario = await _repositorio.getUsuarioLogin(usuarioModel.email);
+                usuarioModel.email = usuarioModel.email.Trim();
+                var usuario = await _repositorio.getUsuarioLogin(usuarioModel.email, usuarioModel.senha);
 
-                if(usuario != null)
+                if (usuario != null)
                 {
 
+                    var jwtConfiguracoes = new JWTConfiguracoes(_tokenConfigurations,_signingConfigurations);
 
-                    ClaimsIdentity identity = new ClaimsIdentity(
-
-                        new GenericIdentity(usuario.email),
-                        new[]
-                        {
-                            new Claim(JwtRegisteredClaimNames.Jti , Guid.NewGuid().ToString()),
-                            new Claim(JwtRegisteredClaimNames.UniqueName, usuario.email)
-                        }
-                    ); ;
-
-                    var createDate = HelperHorario.HoraDeBrasilia;
-                    var expirationDate = createDate + TimeSpan.FromSeconds(_tokenConfigurations.Seconds);
-
-                    var handler = new JwtSecurityTokenHandler();
+                    var token = jwtConfiguracoes.gerarToken(usuarioModel.email);
 
                     return new UsuarioModel()
                     {
                         id = usuario.id,
                         email = usuario.email,
                         status = 0,
+                        dataDeAtualizacao =  usuario.dataDeAtualizacao,
+                        dataDeCadastro = usuario.dataDeCadastro,
                         mensagem = "Login efetuado com sucesso.",
-                        created = createDate.ToString(),
-                        expiration = expirationDate.ToString(),
-                        token = CreateToken(identity, createDate, expirationDate, handler),
+                        created = jwtConfiguracoes.createdDateToken.ToString(),
+                        expiration = jwtConfiguracoes.expirationDateToken.ToString(),
+                        token = token,
                         nome = usuario.nome
                     };
 
@@ -174,31 +166,17 @@ namespace Service.Services
                         id = usuario.id,
                         email = usuario.email,
                         status = 1,
-                        mensagem = "Usuario não encontrado, verifique se sua senha esta correta."
+                        mensagem = "Usuario não encontrado, verifique se sua senha e email estão corretos."
                     };
                 }
+
             }
+                
             catch (Exception ex)
             {
-                return new ServerStatus() { mensagem = ex.Message , status = -1 };
+                return new ServerStatus() { mensagem = ex.Message, status = -1 };
             }
         }
-
-        private string CreateToken(ClaimsIdentity identity , DateTime createDate ,DateTime expirationDate , JwtSecurityTokenHandler handler)
-        {
-            var securityToken = handler.CreateToken(new SecurityTokenDescriptor()
-            {
-                Issuer = _tokenConfigurations.Issuer,
-                Audience = _tokenConfigurations.Audience,
-                SigningCredentials = _signingConfigurations.SigningCredentials,
-                Subject = identity,
-                NotBefore = createDate,
-                Expires = expirationDate
-            });
-
-            return handler.WriteToken(securityToken);
-        }
-
 
     }
 }

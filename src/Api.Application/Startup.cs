@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 
 namespace application
 {
@@ -69,7 +70,32 @@ namespace application
             });
 
             services.AddControllers();
-            services.AddSwaggerGen();
+
+            services.AddSwaggerGen(c => {
+
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme() { 
+                  Description = "Entre com o token JWT",
+                  Name = "Authorization",
+                  In =  ParameterLocation.Header,
+                  Type = SecuritySchemeType.ApiKey
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement() {
+                    { 
+                    new OpenApiSecurityScheme()
+                    {
+                        Reference = new OpenApiReference()
+                        {
+                            Id = "Bearer",
+                            Type = ReferenceType.SecurityScheme
+                        }
+                    },
+                    new List<string>()
+                    }
+                });
+            
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

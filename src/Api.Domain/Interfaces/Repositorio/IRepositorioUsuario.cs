@@ -10,6 +10,6 @@ namespace Domain.Interfaces.Repositorio
     {
 
         Task<List<Usuario>> getUsuarios();
-        Task<Usuario> getUsuarioLogin(string email);
+        Task<Usuario> getUsuarioLogin(string email, string senha);
     }
 }
