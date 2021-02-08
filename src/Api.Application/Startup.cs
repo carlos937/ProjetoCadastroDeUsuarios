@@ -22,6 +22,7 @@ namespace application
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -68,7 +69,17 @@ namespace application
                     .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
                     .RequireAuthenticatedUser().Build());
             });
-
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.AllowAnyOrigin()
+                                             .AllowAnyMethod()
+                                             .AllowAnyHeader()
+                                             .SetIsOriginAllowedToAllowWildcardSubdomains();
+                                  });
+            });
             services.AddControllers();
 
             services.AddSwaggerGen(c => {
@@ -111,6 +122,7 @@ namespace application
 
             app.UseAuthorization();
 
+            app.UseCors(MyAllowSpecificOrigins);
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

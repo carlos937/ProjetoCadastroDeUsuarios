@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Helpers
 {
-    public static class HelperCryptografiaRSA
+    public static class CryptografiaRSA
     {
 
 
@@ -26,45 +26,35 @@ namespace Domain.Helpers
         {
             return await criptografia(texto, false);
         }
-
-
-
-
-        private  static async Task<string> criptografia(string texto, bool toogle)
+        private static async Task<string> criptografia(string texto, bool toogle)
         {
             try
             {
-                //Create a UnicodeEncoder to convert between byte array and string.
                 UnicodeEncoding ByteConverter = new UnicodeEncoding();
-
-                //Create byte arrays to hold original, encrypted, and decrypted data.
-               
                 byte[] resultado;
-
-                //Create a new instance of RSACryptoServiceProvider to generate
-                //public and private key data.
                 using (RSACryptoServiceProvider objRSA = new RSACryptoServiceProvider())
                 {
+                    // verifica se vai encriptar ou descriptar a mensagem
                     if (toogle)
                     {
+                        // converte o texto em bytes
                         byte[] dataToEncrypt = ByteConverter.GetBytes(texto);
+                        // chama função para encriptar mensagem 
                         resultado = await RSAEncrypt(dataToEncrypt, false, objRSA);
+                        // devolve a mensagem encriptada em base 64
                         return Convert.ToBase64String(resultado);
                     }
                     else
                     {
-                        var dataToEncrypt =  Convert.FromBase64String(texto);
+                        // transforma a mensagem de base 64 para bytes
+                        var dataToEncrypt = Convert.FromBase64String(texto);
+                        // chama a função para descriptar a mensagem
                         resultado = await RSADecrypt(dataToEncrypt, false, objRSA);
+                        // retorna mensagem descriptada
                         return ByteConverter.GetString(resultado);
 
                     }
 
-                    // obter chaves de criptografia
-                    //var resposta ="Publica "+
-                    //     ConverterRSAParametersParaXML(objRSA.ExportParameters(false))
-                    //     + "  |||||||||||| Privada " +
-                    //      ConverterRSAParametersParaXML(objRSA.ExportParameters(true));
-                    
                 }
             }
             catch (Exception ex)
@@ -73,11 +63,13 @@ namespace Domain.Helpers
             }
         }
 
-        private static async Task<byte[]>  RSAEncrypt(byte[] DataToEncrypt, bool DoOAEPPadding, RSACryptoServiceProvider objRSA)
+        private static async Task<byte[]> RSAEncrypt(byte[] DataToEncrypt, bool DoOAEPPadding, RSACryptoServiceProvider objRSA)
         {
             try
             {
+                // Informa as chaves 
                 objRSA.FromXmlString(chavePublica);
+                // devolve a mensagem encriptada
                 return await Task.FromResult(objRSA.Encrypt(DataToEncrypt, DoOAEPPadding));
             }
             catch (Exception e)
@@ -90,8 +82,9 @@ namespace Domain.Helpers
         {
             try
             {
-
+                // Informa as chaves 
                 objRSA.FromXmlString(chavePrivada);
+                // retorna mensagem descriptada
                 return await Task.FromResult(objRSA.Decrypt(DataToDecrypt, DoOAEPPadding));
             }
 
@@ -107,13 +100,9 @@ namespace Domain.Helpers
         {
             try
             {
-                //we need some buffer
                 var sw = new System.IO.StringWriter();
-                //we need a serializer
                 var xs = new System.Xml.Serialization.XmlSerializer(typeof(RSAParameters));
-                //serialize the key into the stream
                 xs.Serialize(sw, chave);
-                //get the string from the stream
                 return sw.ToString();
             }
 
@@ -126,17 +115,27 @@ namespace Domain.Helpers
         {
             try
             {
-                //get a stream from the string
                 var sr = new System.IO.StringReader(chave);
-                //we need a deserializer
                 var xs = new System.Xml.Serialization.XmlSerializer(typeof(RSAParameters));
-                //get the object back from the stream
                 return (RSAParameters)xs.Deserialize(sr);
             }
 
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public static string BuscarChaves() {
+
+            using (RSACryptoServiceProvider objRSA = new RSACryptoServiceProvider())
+            {
+
+                return "Publica " +
+                 ConverterRSAParametersParaXML(objRSA.ExportParameters(false))
+                 + "  |||||||||||| Privada " +
+                  ConverterRSAParametersParaXML(objRSA.ExportParameters(true));
+
             }
         }
 

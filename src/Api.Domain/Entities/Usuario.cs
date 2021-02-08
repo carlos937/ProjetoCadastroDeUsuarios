@@ -51,7 +51,7 @@ namespace Domain.Entities
 
                 try
                 {
-                    if (!String.IsNullOrEmpty(HelperCryptografiaRSA.decrypt(senha).Result))
+                    if (!String.IsNullOrEmpty(CryptografiaRSA.decrypt(senha).Result))
                     {
                         this.senha = senha;
                     }
@@ -74,8 +74,8 @@ namespace Domain.Entities
 
         public bool verificarSeASenhaEIgual(string senha)
         {
-           if(HelperCryptografiaRSA.decrypt(this.senha).Result
-               == HelperCryptografiaRSA.decrypt(senha).Result)
+           if(CryptografiaRSA.decrypt(this.senha).Result
+               == CryptografiaRSA.decrypt(senha).Result)
             {
                 return true;
             }
