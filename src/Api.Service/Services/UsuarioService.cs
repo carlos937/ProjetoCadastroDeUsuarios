@@ -161,10 +161,8 @@ namespace Service.Services
                 }
                 else
                 {
-                    return new UsuarioModel()
+                    return new ServerStatus()
                     {
-                        id = usuario.id,
-                        email = usuario.email,
                         status = 1,
                         mensagem = "Usuario não encontrado, verifique se sua senha e email estão corretos."
                     };

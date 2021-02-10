@@ -48,10 +48,9 @@ namespace Domain.Entities
         {
             if (!String.IsNullOrEmpty(senha))
             {
-
                 try
                 {
-                    if (!String.IsNullOrEmpty(CryptografiaRSA.decrypt(senha).Result))
+                    if (!String.IsNullOrEmpty(CryptografiaRSA.decrypt(senha)))
                     {
                         this.senha = senha;
                     }
@@ -74,8 +73,8 @@ namespace Domain.Entities
 
         public bool verificarSeASenhaEIgual(string senha)
         {
-           if(CryptografiaRSA.decrypt(this.senha).Result
-               == CryptografiaRSA.decrypt(senha).Result)
+            if (CryptografiaRSA.decrypt(this.senha)
+               == CryptografiaRSA.decrypt(senha))
             {
                 return true;
             }

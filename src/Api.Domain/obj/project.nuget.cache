@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "ZV5rElwZZ0jtasnT4zA5MjbQiZkjjWUbwVgkJ45Ze4ZO/yZewNYwPWgCxLCDyaa0ol3frhxRpQj5QN2sPtJVkA==",
+  "dgSpecHash": "Hbn1Tg94O79tdIPGHXoA+BR/tLep+aimrX3mfzTxD/4N6TOEP8qkMdOhZSO5Q21j6QG2IucWP5wyJYKWFDPtsA==",
   "success": true,
   "projectFilePath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\bouncycastle.netcore\\1.8.8\\bouncycastle.netcore.1.8.8.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.8.0\\microsoft.identitymodel.jsonwebtokens.6.8.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.identitymodel.logging\\6.8.0\\microsoft.identitymodel.logging.6.8.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.8.0\\microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.8.0\\system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],

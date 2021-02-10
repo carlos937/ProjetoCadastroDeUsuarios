@@ -94,3 +94,4 @@ D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\bin\Debug\netco
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netcoreapp3.1\Application.csproj.CoreCompileInputs.cache
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netcoreapp3.1\Application.MvcApplicationPartsAssemblyInfo.cs
 D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\obj\Debug\netcoreapp3.1\Application.MvcApplicationPartsAssemblyInfo.cache
+D:\desenvolvimento\ProjetoCadastroDeUsuarios\src\Api.Application\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
