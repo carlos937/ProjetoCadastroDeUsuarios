@@ -17,9 +17,10 @@ namespace Domain.Entities
 
         public Usuario(string nome, string email, string senha)
         {
-            this.nome = nome;
-            this.email = email;
-            this.senha = senha;
+
+            this.setNome(nome);
+            this.setEmail(email);
+            this.setSenha(senha);
         }
 
         public void setNome(string nome)
