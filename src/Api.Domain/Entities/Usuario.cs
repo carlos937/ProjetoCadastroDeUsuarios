@@ -62,7 +62,7 @@ namespace Domain.Entities
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("Formato de senha invalido: "+ ex.Message);
+                    throw new Exception(ex.Message);
                 }
                
             }

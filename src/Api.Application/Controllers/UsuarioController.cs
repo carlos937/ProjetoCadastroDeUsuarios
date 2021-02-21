@@ -38,6 +38,14 @@ namespace Application.Controllers
         {
             return await _serviceUsuario.atualizar(usuarioModel);
         }
+
+        [Authorize("Bearer")]
+        [HttpPost("AlterarSenha")]
+        public async Task<ServerStatus> AlterarSenha(UsuarioModel usuarioModel)
+        {
+            return await _serviceUsuario.alterarSenha(usuarioModel);
+        }
+
         [Authorize("Bearer")]
         [HttpGet("Remover")]
         public async Task<ServerStatus> Remover(Guid id)

@@ -87,15 +87,34 @@ namespace Service.Services
         {
             try
             {
-                usuarioModel.email = usuarioModel.email.Trim();
                 var usuario = _repositorio.find(usuarioModel.id).Result;
-                usuario.setEmail(usuarioModel.email);
+                usuario.setEmail(usuarioModel.email.Trim());
                 usuario.setNome(usuarioModel.nome);
-                usuario.setSenha(usuarioModel.senha);
                 await _repositorio.updateAsync(usuario);
                 usuarioModel.id = usuario.id;
                 usuarioModel.status = 0;
                 usuarioModel.mensagem = "Usuario atualizado com sucesso.";
+                return usuarioModel;
+            }
+            catch (Exception ex)
+            {
+                return new ServerStatus()
+                {
+                    status = -1,
+                    mensagem = ex.Message
+                };
+            }
+        }
+        public async Task<ServerStatus> alterarSenha(UsuarioModel usuarioModel)
+        {
+            try
+            {
+                var usuario = _repositorio.find(usuarioModel.id).Result;
+                usuario.setSenha(usuarioModel.senha);
+                await _repositorio.updateAsync(usuario);
+                usuarioModel.id = usuario.id;
+                usuarioModel.status = 0;
+                usuarioModel.mensagem = "Senha alterada com sucesso.";
                 return usuarioModel;
             }
             catch (Exception ex)

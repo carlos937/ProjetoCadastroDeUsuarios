@@ -12,6 +12,7 @@ namespace Domain.Interfaces.Service
         Task<List<UsuarioModel>> buscarTodos();
         Task<ServerStatus> adicionar(UsuarioModel usuarioModel);
         Task<ServerStatus> atualizar(UsuarioModel usuarioModel);
+        Task<ServerStatus> alterarSenha(UsuarioModel usuarioModel);
         Task<ServerStatus> remover(Guid id);
         Task<ServerStatus> login(UsuarioModel usuarioModel);
  
