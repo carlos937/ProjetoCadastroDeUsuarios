@@ -10,8 +10,6 @@ namespace Domain.Models
         public DateTime dataDeCadastro { get; set; }
         public DateTime dataDeAtualizacao { get; set; }
         public bool lixeira { get; set; }
-        public string created { get; set; } 
-        public string expiration { get; set; } 
-        public string token { get; set; }
+     
     }
 }

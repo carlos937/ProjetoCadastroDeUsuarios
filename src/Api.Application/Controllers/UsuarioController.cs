@@ -21,8 +21,8 @@ namespace Application.Controllers
             _serviceUsuario = serviceUsuario;
         }
         [Authorize("Bearer")]
-        [HttpGet("SelectAll")]
-        public async Task<List<UsuarioModel>> SelectAll()
+        [HttpGet("BuscarTodos")]
+        public async Task<List<UsuarioModel>> BuscarTodos()
         {
             return await _serviceUsuario.buscarTodos();
         }
@@ -54,9 +54,9 @@ namespace Application.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<ServerStatus> login(UsuarioModel usuarioModel)
+        public async Task<ServerStatus> login(LoginModel loginModel)
         {
-            return await _serviceUsuario.login(usuarioModel);
+            return await _serviceUsuario.login(loginModel);
         }
    
     }

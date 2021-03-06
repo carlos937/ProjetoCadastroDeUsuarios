@@ -14,7 +14,7 @@ namespace Domain.Interfaces.Service
         Task<ServerStatus> atualizar(UsuarioModel usuarioModel);
         Task<ServerStatus> alterarSenha(UsuarioModel usuarioModel);
         Task<ServerStatus> remover(Guid id);
-        Task<ServerStatus> login(UsuarioModel usuarioModel);
+        Task<ServerStatus> login(LoginModel loginModel);
  
     }
 }

@@ -149,7 +149,7 @@ namespace Service.Services
             }
         }
 
-        public async Task<ServerStatus> login(UsuarioModel usuarioModel)
+        public async Task<ServerStatus> login(LoginModel usuarioModel)
         {
             try
             {
@@ -163,18 +163,23 @@ namespace Service.Services
 
                     var token = jwtConfiguracoes.gerarToken(usuarioModel.email);
 
-                    return new UsuarioModel()
+                    var jsonWebTokenModel = new JsonWebTokenModel()
+                    {
+                        created = jwtConfiguracoes.createdDateToken.ToString(),
+                        expiration = jwtConfiguracoes.expirationDateToken.ToString(),
+                        token = token
+                    };
+
+                    return new LoginModel()
                     {
                         id = usuario.id,
                         email = usuario.email,
                         status = 0,
+                        mensagem = "Login efetuado com sucesso.",
                         dataDeAtualizacao =  usuario.dataDeAtualizacao,
                         dataDeCadastro = usuario.dataDeCadastro,
-                        mensagem = "Login efetuado com sucesso.",
-                        created = jwtConfiguracoes.createdDateToken.ToString(),
-                        expiration = jwtConfiguracoes.expirationDateToken.ToString(),
-                        token = token,
-                        nome = usuario.nome
+                        nome = usuario.nome,
+                        jsonWebToken = jsonWebTokenModel
                     };
 
                 }
