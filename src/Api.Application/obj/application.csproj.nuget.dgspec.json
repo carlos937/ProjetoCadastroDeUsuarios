@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\Application.csproj": {}
+    "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\Application.csproj": {}
   },
   "projects": {
-    "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\Application.csproj": {
+    "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\Application.csproj",
+        "projectUniqueName": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\Application.csproj",
+        "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\Application.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\obj\\",
+        "outputPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,14 +27,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj": {
-                "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj"
+              "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj": {
+                "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj"
               },
-              "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
+              "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
               },
-              "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj": {
-                "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj"
+              "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj": {
+                "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj"
               }
             }
           }
@@ -48,6 +48,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.11, )"
@@ -79,14 +83,14 @@
         }
       }
     },
-    "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj": {
+    "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj",
+        "projectUniqueName": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj",
         "projectName": "CrossCutting",
-        "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj",
+        "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\obj\\",
+        "outputPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -102,14 +106,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj": {
-                "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj"
+              "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj": {
+                "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj"
               },
-              "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
+              "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
               },
-              "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj": {
-                "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj"
+              "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj": {
+                "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj"
               }
             }
           }
@@ -123,6 +127,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.0, )"
@@ -147,14 +155,14 @@
         }
       }
     },
-    "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj": {
+    "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj",
+        "projectUniqueName": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj",
+        "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\obj\\",
+        "outputPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -170,8 +178,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
+              "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
               }
             }
           }
@@ -225,14 +233,14 @@
         }
       }
     },
-    "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
+    "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj",
+        "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\obj\\",
+        "outputPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -291,14 +299,14 @@
         }
       }
     },
-    "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj": {
+    "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj",
+        "projectUniqueName": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj",
+        "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\obj\\",
+        "outputPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -314,11 +322,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj": {
-                "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj"
+              "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj": {
+                "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj"
               },
-              "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
+              "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
               }
             }
           }
@@ -331,6 +339,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

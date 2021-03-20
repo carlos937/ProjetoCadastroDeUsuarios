@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using AutoMapper;
+using Domain.Entities;
 using Domain.Helpers;
 using Domain.Interfaces;
 using Domain.Interfaces.Repositorio;
@@ -26,21 +27,23 @@ namespace Service.Services
         private TokenConfigurations _tokenConfigurations;
 
         private SigningConfigurations _signingConfigurations;
-
         public IConfiguration _configuration { get; }
 
+        public readonly IMapper _mapper;
 
         public UsuarioService(
             IRepositorioUsuario repositorio,
             IConfiguration configuration ,
             TokenConfigurations tokenConfigurations,
-            SigningConfigurations signingConfigurations
+            SigningConfigurations signingConfigurations,
+            IMapper mapper
             )
         {
             _configuration = configuration;
             _repositorio = repositorio;
             _tokenConfigurations = tokenConfigurations;
             _signingConfigurations = signingConfigurations;
+            _mapper = mapper;
         }
 
         public async Task<List<UsuarioModel>> buscarTodos()
@@ -49,12 +52,7 @@ namespace Service.Services
 
             _repositorio.getUsuarios().Result.ToList().ForEach(u =>
             {
-                usuarios.Add(new UsuarioModel()
-                {
-                    id = u.id,
-                    email = u.email,
-                    nome = u.nome
-                });
+                usuarios.Add(_mapper.Map<UsuarioModel>(u));
             });
 
             return await Task.FromResult(usuarios);
@@ -65,8 +63,7 @@ namespace Service.Services
             try
             {
                 usuarioModel.email = usuarioModel.email.Trim();
-                var usuario = new Usuario(usuarioModel.nome, usuarioModel.email, usuarioModel.senha);
-
+                var usuario = _mapper.Map<Usuario>(usuarioModel);
                 await _repositorio.InsertAsync(usuario);
                 usuarioModel.id = usuario.id;
                 usuarioModel.status = 0;
@@ -88,6 +85,7 @@ namespace Service.Services
             try
             {
                 var usuario = _repositorio.find(usuarioModel.id).Result;
+                _mapper.Map<UsuarioModel, Usuario>(usuarioModel, usuario);
                 usuario.setEmail(usuarioModel.email.Trim());
                 usuario.setNome(usuarioModel.nome);
                 await _repositorio.updateAsync(usuario);
@@ -199,6 +197,8 @@ namespace Service.Services
                 return new ServerStatus() { mensagem = ex.Message, status = -1 };
             }
         }
+
+
 
     }
 }

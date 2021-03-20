@@ -5788,11 +5788,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj",
+      "projectUniqueName": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj",
+      "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\obj\\",
+      "outputPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5808,8 +5808,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
-              "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
+            "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
+              "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
             }
           }
         }

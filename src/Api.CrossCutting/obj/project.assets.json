@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "AutoMapper/10.1.0": {
+      "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -1538,6 +1538,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "AutoMapper": "10.1.1",
           "Data": "1.0.0",
           "Domain": "1.0.0"
         },
@@ -1551,14 +1552,14 @@
     }
   },
   "libraries": {
-    "AutoMapper/10.1.0": {
-      "sha512": "qxn9+PpQJD53PAUHGXW3HTcq6Rxbv3Pyq/jTcc60ZYwOygyqUfHIY3HBChKbDwtTHdlwlQqJeJ1ckVcaoytxxw==",
+    "AutoMapper/10.1.1": {
+      "sha512": "uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
       "type": "package",
-      "path": "automapper/10.1.0",
+      "path": "automapper/10.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "automapper.10.1.0.nupkg.sha512",
+        "automapper.10.1.1.nupkg.sha512",
         "automapper.nuspec",
         "icon.png",
         "lib/net461/AutoMapper.dll",
@@ -5813,6 +5814,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "AutoMapper >= 10.1.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.0",
       "Data >= 1.0.0",
       "Domain >= 1.0.0",
@@ -5825,11 +5827,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj",
+      "projectUniqueName": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj",
       "projectName": "CrossCutting",
-      "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj",
+      "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\obj\\",
+      "outputPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5845,14 +5847,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj": {
-              "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj"
+            "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj": {
+              "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj"
             },
-            "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
-              "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
+            "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj": {
+              "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Domain\\Domain.csproj"
             },
-            "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj": {
-              "projectPath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj"
+            "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj": {
+              "projectPath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Service\\Service.csproj"
             }
           }
         }
@@ -5866,6 +5868,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[10.1.1, )"
+          },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[8.1.0, )"

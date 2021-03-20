@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CrossCutting;
+using CrossCutting.Mappings;
 using Data.Context;
 using Domain.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -107,6 +109,17 @@ namespace application
                 });
             
             });
+
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new EntityToModelProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            services.AddMvc();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LTppqD9ttoBg93C8jOgWfgDpK+1j2yAKMmhOBEhyfYjzqvFXmBjKwDzKRsq6MsWSpC/HGSTAkmSgSZADEis01g==",
+  "dgSpecHash": "K0ZqWiKZXEGDvMFIk5CZ3j4UOe68rjInfG26NPy9IV+SwiKNm4jR7pbp9EutC0AIeBaS3Z8OY/DyFQMpyWs4kw==",
   "success": true,
-  "projectFilePath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj",
+  "projectFilePath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Data\\Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\bouncycastle.netcore\\1.8.8\\bouncycastle.netcore.1.8.8.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

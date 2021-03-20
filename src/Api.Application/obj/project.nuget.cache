@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Y0GizaIdwkLJ6EMifscYFl8G6/EJUSiG7BBn0ids3bcm3Y9lwyjRPsSXwpWZ1ZAlJ51S6F3k3M3IfOJvBKIbrw==",
+  "dgSpecHash": "ZjRDODIOeEMFEJkONNsf1Z2ocvYkj01gVe6zLy4YAGWzD9l67YlfeHtZ8Wlvlpw0rsJWYnPxH78Hc2Dcr0YKfw==",
   "success": true,
-  "projectFilePath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\Application.csproj",
+  "projectFilePath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.Application\\Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\user\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\bouncycastle.netcore\\1.8.8\\bouncycastle.netcore.1.8.8.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.11\\microsoft.aspnetcore.authentication.jwtbearer.3.1.11.nupkg.sha512",

@@ -20,6 +20,7 @@ namespace Application.Controllers
         {
             _serviceUsuario = serviceUsuario;
         }
+
         [Authorize("Bearer")]
         [HttpGet("BuscarTodos")]
         public async Task<List<UsuarioModel>> BuscarTodos()
