@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using CrossCutting;
+using CrossCutting.JWT;
 using CrossCutting.Mappings;
 using Data.Context;
 using Domain.Security;
@@ -40,6 +41,7 @@ namespace application
             );
             ConfigureService.ConfigureDependenciesService(services);
             ConfigureRepository.ConfigureDependenciesService(services);
+            ConfigureJWT.ConfigureDependenciesJWT(services);
             var signingConfigurations = new SigningConfigurations();
             services.AddSingleton(signingConfigurations);
 

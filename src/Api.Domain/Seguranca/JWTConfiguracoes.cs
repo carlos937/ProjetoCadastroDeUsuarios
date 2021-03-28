@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Helpers;
+using Domain.Interfaces.Seguranca;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Security.Principal;
 using System.Text;
 namespace Domain.Security
 {
-    public class JWTConfiguracoes
+    public class JWTConfiguracoes : IJWTConfiguracoes
     {
         private TokenConfigurations _tokenConfigurations;
 
@@ -26,6 +27,17 @@ namespace Domain.Security
             _signingConfigurations = signingConfigurations;
 
         }
+
+
+        public DateTime getCreatedDateToken()
+        {
+            return createdDateToken;
+        }
+        public DateTime getExpirationDateToken()
+        {
+            return createdDateToken;
+        }
+
 
         public string gerarToken(string identificacao)
         {

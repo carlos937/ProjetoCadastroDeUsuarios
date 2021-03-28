@@ -3,6 +3,7 @@ using Domain.Entities;
 using Domain.Helpers;
 using Domain.Interfaces;
 using Domain.Interfaces.Repositorio;
+using Domain.Interfaces.Seguranca;
 using Domain.Interfaces.Service;
 using Domain.Models;
 using Domain.Security;
@@ -31,12 +32,15 @@ namespace Service.Services
 
         public readonly IMapper _mapper;
 
+        public IJWTConfiguracoes _jwtConfiguracoes;
+
         public UsuarioService(
             IRepositorioUsuario repositorio,
             IConfiguration configuration ,
             TokenConfigurations tokenConfigurations,
             SigningConfigurations signingConfigurations,
-            IMapper mapper
+            IMapper mapper,
+            IJWTConfiguracoes jWTConfiguracoes
             )
         {
             _configuration = configuration;
@@ -44,6 +48,7 @@ namespace Service.Services
             _tokenConfigurations = tokenConfigurations;
             _signingConfigurations = signingConfigurations;
             _mapper = mapper;
+            _jwtConfiguracoes = jWTConfiguracoes;
         }
 
         public async Task<List<UsuarioModel>> buscarTodos()
@@ -62,7 +67,7 @@ namespace Service.Services
         {
             try
             {
-                usuarioModel.email = usuarioModel.email.Trim();
+                usuarioModel.senha = usuarioModel.email.Trim();
                 var usuario = _mapper.Map<Usuario>(usuarioModel);
                 await _repositorio.InsertAsync(usuario);
                 usuarioModel.id = usuario.id;
@@ -156,15 +161,14 @@ namespace Service.Services
 
                 if (usuario != null)
                 {
+                   
 
-                    var jwtConfiguracoes = new JWTConfiguracoes(_tokenConfigurations,_signingConfigurations);
-
-                    var token = jwtConfiguracoes.gerarToken(usuarioModel.email);
+                    var token = _jwtConfiguracoes.gerarToken(usuarioModel.email);
 
                     var jsonWebTokenModel = new JsonWebTokenModel()
                     {
-                        created = jwtConfiguracoes.createdDateToken.ToString(),
-                        expiration = jwtConfiguracoes.expirationDateToken.ToString(),
+                        created = _jwtConfiguracoes.getCreatedDateToken().ToString(),
+                        expiration = _jwtConfiguracoes.getExpirationDateToken().ToString(),
                         token = token
                     };
 
