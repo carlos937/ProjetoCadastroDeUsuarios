@@ -330,66 +330,30 @@ ASALocalRun/
 .mfractor/
 
 
-src/Api.Application/obj/Debug/netcoreapp3.1/application.dll
 
-src/Api.Application/obj/Debug/netcoreapp3.1/application.csproj.CoreCompileInputs.cache
+src/Api.Application/obj
 
-src/Api.Application/obj/Debug/netcoreapp3.1/application.csproj.FileListAbsolute.txt
+src/Api.Application/bin
 
-src/Api.Application/obj/Debug/netcoreapp3.1/application.csprojAssemblyReference.cache
 
-src/Api.CrossCutting/bin/Debug/netcoreapp3.1/CrossCutting.deps.json
+src/Api.CrossCutting/obj
 
-src/Api.CrossCutting/bin/Debug/netcoreapp3.1/CrossCutting.dll
+src/Api.CrossCutting/bin
 
-src/Api.CrossCutting/bin/Debug/netcoreapp3.1/Data.dll
 
-src/Api.CrossCutting/bin/Debug/netcoreapp3.1/Domain.dll
+src/Api.Data/obj
 
-src/Api.CrossCutting/bin/Debug/netcoreapp3.1/Service.dll
+src/Api.Data/bin
 
-src/Api.Data/bin/Debug/netcoreapp3.1/Data.dll
 
-src/Api.Data/bin/Debug/netcoreapp3.1/Domain.dll
+src/Api.Domain/obj
 
-src/Api.Domain/bin/Debug/netcoreapp3.1/Domain.dll
+src/Api.Domain/bin
 
-src/Api.CrossCutting/obj/Debug/netcoreapp3.1/CrossCutting.csproj.CoreCompileInputs.cache
 
-src/Api.CrossCutting/obj/Debug/netcoreapp3.1/CrossCutting.csprojAssemblyReference.cache
+src/Api.Service/obj
 
-src/Api.CrossCutting/obj/Debug/netcoreapp3.1/CrossCutting.dll
+src/Api.Service/bin
 
-src/Api.CrossCutting/obj/project.nuget.cache
 
-src/Api.Data/obj/Debug/netcoreapp3.1/Data.assets.cache
 
-src/Api.Data/obj/Debug/netcoreapp3.1/Data.csproj.CoreCompileInputs.cache
-
-src/Api.Data/obj/Debug/netcoreapp3.1/Data.csprojAssemblyReference.cache
-
-src/Api.Data/obj/Debug/netcoreapp3.1/Data.dll
-
-src/Api.Domain/obj/Debug/netcoreapp3.1/Domain.csproj.CoreCompileInputs.cache
-
-src/Api.Domain/obj/Debug/netcoreapp3.1/Domain.csprojAssemblyReference.cache
-
-src/Api.Domain/obj/Debug/netcoreapp3.1/Domain.dll
-
-src/Api.Service/bin/Debug/netcoreapp3.1/Data.dll
-
-src/Api.Service/bin/Debug/netcoreapp3.1/Domain.dll
-
-src/Api.Service/bin/Debug/netcoreapp3.1/Service.dll
-
-src/Api.Service/obj/Debug/netcoreapp3.1/Service.csproj.CoreCompileInputs.cache
-
-src/Api.Service/obj/Debug/netcoreapp3.1/Service.csproj.FileListAbsolute.txt
-
-src/Api.Service/obj/Debug/netcoreapp3.1/Service.csprojAssemblyReference.cache
-
-src/Api.Service/obj/Debug/netcoreapp3.1/Service.dll
-
-src/Api.Service/obj/project.nuget.cache
-
-src/Api.Service/obj/Service.csproj.nuget.dgspec.json
