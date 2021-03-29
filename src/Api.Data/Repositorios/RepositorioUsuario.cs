@@ -22,11 +22,16 @@ namespace Data.Repositorios
             return await  Task.FromResult(_context.usuarios.Where(u => !u.lixeira).ToList());
         }
 
+        public async Task<Usuario> getUsuarioEmail(string email)
+        {
+           return  await Task.FromResult(_context.usuarios.FirstOrDefault(u => u.email == email && !u.lixeira));
+        }
+
         public async Task<Usuario> getUsuarioLogin(string email , string senha )
         {
 
 
-            var usuarios = await Task.FromResult(_context.usuarios.Where(u => u.email == email).ToList());
+            var usuarios = await Task.FromResult(_context.usuarios.Where(u => u.email == email && !u.lixeira).ToList());
 
             var usuario = usuarios.FirstOrDefault(u => u.verificarSeASenhaEIgual(senha));
 

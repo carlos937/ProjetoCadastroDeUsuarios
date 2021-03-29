@@ -120,8 +120,8 @@ namespace cadastro_de_usuarios_teste
                      senha = senhaRsa,
                      jsonWebToken = new JsonWebTokenModel()
                      {
-                          created = f.Date.ToString(),
-                          expiration = f.Date.ToString(),
+                          created = f.Date.Recent(),
+                          expiration = f.Date.Future(),
                           token = StringExtension.alfanumericoAleatorio(20)
                      }
                  });

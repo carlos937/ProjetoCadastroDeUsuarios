@@ -12,7 +12,6 @@ namespace Data.Mapping
         {
             builder.ToTable("Usuario");
             builder.HasKey(u => u.id);
-            builder.HasIndex(u => u.email).IsUnique();
             builder.Property(u => u.nome).IsRequired();
         }
     }

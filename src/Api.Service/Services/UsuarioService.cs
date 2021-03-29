@@ -68,12 +68,40 @@ namespace Service.Services
             try
             {
                 usuarioModel.email = usuarioModel.email.Trim();
+
+                if((await _repositorio.getUsuarioEmail(usuarioModel.email)) != null)
+                {
+                    return new ServerStatus()
+                    {
+                        status = 1,
+                        mensagem = "Este email já se encontra cadastrado em nosso sistema."
+                    };
+                }
+
                 var usuario = _mapper.Map<Usuario>(usuarioModel);
                 await _repositorio.InsertAsync(usuario);
-                usuarioModel.id = usuario.id;
-                usuarioModel.status = 0;
-                usuarioModel.mensagem = "Usuario adicionado com sucesso.";
-                return usuarioModel;
+
+                var token = _jwtConfiguracoes.gerarToken(usuarioModel.email);
+
+                var jsonWebTokenModel = new JsonWebTokenModel()
+                {
+                    created = _jwtConfiguracoes.getCreatedDateToken(),
+                    expiration = _jwtConfiguracoes.getExpirationDateToken(),
+                    token = token
+                };
+
+                return new LoginModel()
+                {
+                    id = usuario.id,
+                    email = usuario.email,
+                    status = 0,
+                    mensagem = "Login efetuado com sucesso.",
+                    dataDeAtualizacao = usuario.dataDeAtualizacao,
+                    dataDeCadastro = usuario.dataDeCadastro,
+                    nome = usuario.nome,
+                    jsonWebToken = jsonWebTokenModel
+                };
+
             }
             catch (Exception ex)
             {
@@ -89,8 +117,16 @@ namespace Service.Services
         {
             try
             {
+                if ((await _repositorio.getUsuarioEmail(usuarioModel.email)) != null)
+                {
+                    return new ServerStatus()
+                    {
+                        status = 1,
+                        mensagem = "Este email já se encontra cadastrado em nosso sistema."
+                    };
+                }
                 var usuario = _repositorio.find(usuarioModel.id).Result;
-                usuario.setEmail(usuarioModel.email);
+                usuario.setEmail(usuarioModel.email.Trim());
                 usuario.setNome(usuarioModel.nome);
                 await _repositorio.updateAsync(usuario);
                 usuarioModel.id = usuario.id;
@@ -166,8 +202,8 @@ namespace Service.Services
 
                     var jsonWebTokenModel = new JsonWebTokenModel()
                     {
-                        created = _jwtConfiguracoes.getCreatedDateToken().ToString(),
-                        expiration = _jwtConfiguracoes.getExpirationDateToken().ToString(),
+                        created = _jwtConfiguracoes.getCreatedDateToken(),
+                        expiration = _jwtConfiguracoes.getExpirationDateToken(),
                         token = token
                     };
 
