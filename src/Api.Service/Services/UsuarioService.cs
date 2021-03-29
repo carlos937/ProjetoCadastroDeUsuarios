@@ -67,7 +67,7 @@ namespace Service.Services
         {
             try
             {
-                usuarioModel.senha = usuarioModel.email.Trim();
+                usuarioModel.email = usuarioModel.email.Trim();
                 var usuario = _mapper.Map<Usuario>(usuarioModel);
                 await _repositorio.InsertAsync(usuario);
                 usuarioModel.id = usuario.id;
@@ -90,8 +90,7 @@ namespace Service.Services
             try
             {
                 var usuario = _repositorio.find(usuarioModel.id).Result;
-                _mapper.Map<UsuarioModel, Usuario>(usuarioModel, usuario);
-                usuario.setEmail(usuarioModel.email.Trim());
+                usuario.setEmail(usuarioModel.email);
                 usuario.setNome(usuarioModel.nome);
                 await _repositorio.updateAsync(usuario);
                 usuarioModel.id = usuario.id;

@@ -66,7 +66,6 @@ namespace cadastro_de_usuarios_teste
 
             //arrange
             _usuarioFixture._iUsuarioServiceMock.Setup(s => s.atualizar(It.IsAny<UsuarioModel>())).ReturnsAsync(_usuarioFixture.GerarUsuarioModel());
-            _usuarioFixture._mapperMock.Setup(s => s.Map<UsuarioModel, Usuario>(It.IsAny<UsuarioModel>(),It.IsAny<Usuario>())).Returns(_usuarioFixture.GerarUsuario());
             _usuarioFixture._iUsuarioRepositorioMock.Setup(s => s.find(It.IsAny<Guid>())).ReturnsAsync(_usuarioFixture.GerarUsuario());
             //act
             var resultado = await _usuarioService.atualizar(_usuarioFixture.GerarUsuarioModel());

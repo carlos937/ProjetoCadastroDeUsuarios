@@ -26,7 +26,7 @@ D:\desenvolvimento\ProjetosBase\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\b
 D:\desenvolvimento\ProjetosBase\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.csprojAssemblyReference.cache
 D:\desenvolvimento\ProjetosBase\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.AssemblyInfoInputs.cache
 D:\desenvolvimento\ProjetosBase\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.AssemblyInfo.cs
+D:\desenvolvimento\ProjetosBase\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.csproj.CoreCompileInputs.cache
 D:\desenvolvimento\ProjetosBase\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.csproj.CopyComplete
 D:\desenvolvimento\ProjetosBase\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.dll
 D:\desenvolvimento\ProjetosBase\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.pdb
-D:\desenvolvimento\ProjetosBase\ProjetoCadastroDeUsuarios\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.csproj.CoreCompileInputs.cache

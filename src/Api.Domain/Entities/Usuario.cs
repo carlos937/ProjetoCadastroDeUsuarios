@@ -36,6 +36,11 @@ namespace Domain.Entities
         }
         public void setEmail(string email)
         {
+            if (!HelperEmail.saberSeEmailEValido(email))
+            {
+                throw new Exception("O email precisa ser valido");
+            }
+
             if (!String.IsNullOrEmpty(email))
             {
                 this.email = email;

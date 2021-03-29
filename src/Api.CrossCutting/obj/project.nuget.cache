@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AmbX2UqwfA5GVg/hfmZIG/XXXhcw7bLCYbnYqfs4tFKMmYkqwmdSGv28ILprsXLHtXYx9vJPgXAydIZaYgZU0w==",
+  "dgSpecHash": "5L692gyigUOXncwkLz2Ue870sb9oZkOhVX1NRjsAlfHnEBctRRZR+yzERYihMgshbPzWQ2l91iYqoZR6dII+3A==",
   "success": true,
-  "projectFilePath": "D:\\desenvolvimento\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj",
+  "projectFilePath": "D:\\desenvolvimento\\ProjetosBase\\ProjetoCadastroDeUsuarios\\src\\Api.CrossCutting\\CrossCutting.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\user\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\bouncycastle.netcore\\1.8.8\\bouncycastle.netcore.1.8.8.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
