@@ -117,7 +117,9 @@ namespace Service.Services
         {
             try
             {
-                if ((await _repositorio.getUsuarioEmail(usuarioModel.email)) != null)
+                var usuario = _repositorio.find(usuarioModel.id).Result;
+
+                if (usuarioModel.email != usuario.email && (await _repositorio.getUsuarioEmail(usuarioModel.email)) != null)
                 {
                     return new ServerStatus()
                     {
@@ -125,7 +127,7 @@ namespace Service.Services
                         mensagem = "Este email já se encontra cadastrado em nosso sistema."
                     };
                 }
-                var usuario = _repositorio.find(usuarioModel.id).Result;
+           
                 usuario.setEmail(usuarioModel.email.Trim());
                 usuario.setNome(usuarioModel.nome);
                 await _repositorio.updateAsync(usuario);
