@@ -50,6 +50,7 @@ namespace cadastro_de_usuarios_teste
             //arrange
             _usuarioFixture._iUsuarioServiceMock.Setup(s => s.adicionar(It.IsAny<UsuarioModel>())).ReturnsAsync(_usuarioFixture.GerarUsuarioModel());
             _usuarioFixture._mapperMock.Setup(s => s.Map<Usuario>(It.IsAny<UsuarioModel>())).Returns(_usuarioFixture.GerarUsuario());
+            _usuarioFixture._jwtConfiguracoes.Setup(s => s.gerarToken(It.IsAny<string>())).Returns(StringExtension.alfanumericoAleatorio(20));
             //act
             var usuarioModel = _usuarioFixture.GerarUsuarioModel();
             var resultado = await _usuarioService.adicionar(usuarioModel);
